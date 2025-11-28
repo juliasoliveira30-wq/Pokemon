@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex Menu Pokémon</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset e estilo base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: radial-gradient(circle at top left, #ff1c1c, #8b0000);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+            color: #fff;
+        }
+
+        h1 {
+            font-family: 'Press Start 2P', cursive;
+            color: #ffde00;
+            text-shadow: 2px 2px 0 #000;
+            font-size: 2em;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Botões estilo cartão Pokémon */
+        .button-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .nav-button {
+            background: linear-gradient(145deg, #ff0000, #8b0000);
+            border: 4px solid #ffde00;
+            border-radius: 20px;
+            padding: 25px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            color: #fff;
+            font-size: 1.1em;
+            position: relative;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+
+        /* Efeito de brilho animado */
+        .nav-button::before {
+            content: '';
+            position: absolute;
+            top: -75%;
+            left: -75%;
+            width: 250%;
+            height: 250%;
+            background: rgba(255, 255, 255, 0.15);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+        }
+
+        .nav-button:hover::before {
+            top: -25%;
+            left: -25%;
+        }
+
+        /* Efeito hover “cartão saltando” */
+        .nav-button:hover {
+            transform: translateY(-8px) scale(1.07) rotate(-1deg);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.6);
+        }
+
+        .nav-button:active {
+            transform: translateY(0) scale(0.98) rotate(0deg);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Responsivo */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+                margin-bottom: 25px;
+            }
+            .nav-button {
+                padding: 18px 15px;
+                font-size: 1em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Menu Pokedex Pokémon</h1>
+
+    <div class="button-list">
+        <a href="ex01.html" class="nav-button">1- Flexbox</a>
+        <a href="ex02.html" class="nav-button">2- Espaçar Igualmente</a>
+        <a href="ex03.html" class="nav-button">3- Pokémon na Grama</a>
+        <a href="ex04.html" class="nav-button">4- Torre Pokémon</a>
+        <a href="ex05.html" class="nav-button">5- O Gengar Fugitivo!</a>
+        <a href="ex06.html" class="nav-button">6- Habitat 2x2</a>
+        <a href="ex07.html" class="nav-button">7- O Snorlax Bloqueia</a>
+        <a href="ex08.html" class="nav-button">8- A Videira do Oddish</a>
+        <a href="ex09.html" class="nav-button">9- Alinhamento no Habitat</a>
+        <a href="ex10.html" class="nav-button">10- Posicionando Lendários</a>
+    </div>
+
+</body>
+</html>
